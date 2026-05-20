@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vidal Jonatan Espinoza Alanoca</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- ICONOS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            background: linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#ff6b35);
+            background-size:400% 400%;
+            animation:fondo 12s ease infinite;
+            font-family:Arial;
+            color:white;
+            overflow-x:hidden;
+        }
+
+        @keyframes fondo{
+            0%{
+                background-position:0% 50%;
+            }
+
+            50%{
+                background-position:100% 50%;
+            }
+
+            100%{
+                background-position:0% 50%;
+            }
+        }
+
+        /* NAVBAR */
+
+        .navbar-custom{
+            background:rgba(0,0,0,0.5);
+            backdrop-filter:blur(10px);
+            margin:20px;
+            border-radius:20px;
+            padding:15px;
+        }
+
+        .navbar-brand{
+            font-weight:bold;
+            font-size:1.4rem;
+        }
+
+        .nav-link{
+            color:white !important;
+            transition:0.3s;
+        }
+
+        .nav-link:hover{
+            color:#ffb347 !important;
+            transform:translateY(-2px);
+        }
+
+        /* CARRUSEL */
+
+        .carousel-custom{
+            width:90%;
+            margin:auto;
+            margin-top:20px;
+            border-radius:20px;
+            overflow:hidden;
+            box-shadow:0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        .carousel-item img{
+            height:550px;
+            object-fit:cover;
+        }
+
+        /* CONTENIDO */
+
+        .contenido{
+            background:rgba(255,255,255,0.08);
+            backdrop-filter:blur(10px);
+            padding:40px;
+            border-radius:25px;
+            margin-top:40px;
+        }
+
+        h1{
+            text-align:center;
+            margin-bottom:40px;
+            font-weight:bold;
+            font-size:3rem;
+        }
+
+        h2{
+            color:#ffb347;
+            margin-bottom:20px;
+            font-weight:bold;
+        }
+
+        .card-personal{
+            background:rgba(255,255,255,0.08);
+            border:2px solid #ff6b35;
+            border-radius:20px;
+            padding:25px;
+            height:100%;
+            transition:0.4s;
+            box-shadow:0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        .card-personal:hover{
+            transform:translateY(-8px);
+        }
+
+        .foto-perfil{
+            width:100%;
+            height:450px;
+            object-fit:cover;
+            border-radius:20px;
+        }
+
+        .juego-img{
+            width:100%;
+            border-radius:20px;
+            height:300px;
+            object-fit:cover;
+        }
+
+        p{
+            line-height:1.8;
+        }
+
+        ol li{
+            margin:15px 0;
+        }
+
+        a{
+            text-decoration:none;
+        }
+
+        iframe{
+            border-radius:15px;
+        }
+
+        /* REDES */
+
+        footer{
+            margin-top:60px;
+            text-align:center;
+            padding:40px;
+        }
+
+        .redes{
+            display:flex;
+            justify-content:center;
+            gap:25px;
+            flex-wrap:wrap;
+            margin-top:20px;
+        }
+
+        .icono{
+            width:80px;
+            height:80px;
+            border-radius:50%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-decoration:none;
+            color:white;
+            font-size:35px;
+            transition:0.4s;
+            box-shadow:0 0 20px rgba(0,0,0,0.4);
+        }
+
+        .icono:hover{
+            transform:translateY(-10px) scale(1.1);
+        }
+
+        .facebook{
+            background:#1877f2;
+        }
+
+        .instagram{
+            background:linear-gradient(
+            45deg,
+            #f09433,
+            #e6683c,
+            #dc2743,
+            #cc2366,
+            #bc1888);
+        }
+
+        .whatsapp{
+            background:#25d366;
+        }
+
+        .github{
+            background:#333;
+        }
+
+        /* BOTON SUBIR */
+
+        .btn-subir{
+            position:fixed;
+            bottom:20px;
+            right:20px;
+            width:50px;
+            height:50px;
+            border:none;
+            border-radius:50%;
+            background:#ff6b35;
+            color:white;
+            font-size:20px;
+            cursor:pointer;
+            transition:0.3s;
+            z-index:1000;
+        }
+
+        .btn-subir:hover{
+            transform:scale(1.1);
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:768px){
+
+            h1{
+                font-size:2rem;
+            }
+
+            .carousel-item img{
+                height:300px;
+            }
+
+            .foto-perfil{
+                height:300px;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- CARRUSEL -->
+
+    <div class="carousel slide carousel-custom"
+        id="carouselExample"
+        data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <img src="img/FOTO1.jpg" class="d-block w-100">
+            </div>
+
+            <div class="carousel-item">
+                <img src="img/FOTO2.jpg" class="d-block w-100">
+            </div>
+
+            <div class="carousel-item">
+                <img src="img/FOTO3.jpg" class="d-block w-100">
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev">
+
+            <span class="carousel-control-prev-icon"></span>
+
+        </button>
+
+        <button class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next">
+
+            <span class="carousel-control-next-icon"></span>
+
+        </button>
+
+    </div>
+
+    <!-- MENU -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="#">
+                VIDAL ESPINOZA
+            </a>
+
+            <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#datos">
+                            Datos
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hobbies">
+                            Hobbies
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cancion">
+                            Canción
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#juego">
+                            Juego
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#vision">
+                            Visión
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tareas">
+                            Tareas
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#redes">
+                            Redes
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- CONTENIDO -->
+
+    <div class="container contenido" id="datos">
+
+        <h1>
+            VIDAL JONATAN ESPINOZA ALANOCA
+        </h1>
+
+        <div class="row">
+
+            <!-- DATOS -->
+
+            <div class="col-md-6 p-3">
+
+                <div class="card-personal">
+
+                    <h2>Datos Personales</h2>
+
+                    <p><strong>Nombre:</strong> Vidal Jonatan Espinoza Alanoca</p>
+
+                    <p><strong>Edad:</strong> 23 años</p>
+
+                    <p><strong>Correo:</strong> ve23257@gmail.com</p>
+
+                    <p><strong>Teléfono:</strong> 64193962</p>
+
+                    <h2>Datos Generales</h2>
+
+                    <p><strong>Carrera:</strong> Ingeniería de Sistemas</p>
+
+                    <p><strong>Universidad:</strong> Universidad Salesiana de Bolivia</p>
+
+                    <p><strong>Semestre:</strong> Séptimo</p>
+
+                    <p><strong>Ciudad:</strong> La Paz</p>
+
+                </div>
+
+            </div>
+
+            <!-- FOTO -->
+
+            <div class="col-md-6 p-3">
+
+                <div class="card-personal">
+
+                    <img src="img/FOTO1.jpg"
+                        class="img-fluid foto-perfil">
+
+                </div>
+
+            </div>
+
+            <!-- HOBBIES -->
+
+            <div class="col-md-6 p-3" id="hobbies">
+
+                <div class="card-personal">
+
+                    <h2>Hobbies</h2>
+
+                    <p>
+                        Me gusta jugar videojuegos,
+                        escuchar música, ver películas,
+                        aprender programación y pasar
+                        tiempo con mis amigos.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- CANCION -->
+
+            <div class="col-md-6 p-3" id="cancion">
+
+                <div class="card-personal">
+
+                    <h2>Canción Favorita</h2>
+
+                    <iframe width="100%"
+                        height="315"
+                        src="https://www.youtube.com/embed/dezRb6MaUnM"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+            </div>
+
+            <!-- JUEGO -->
+
+            <div class="col-md-6 p-3" id="juego">
+
+                <div class="card-personal">
+
+                    <h2>Juego Favorito</h2>
+
+                    <img src="img/freefire.jpeg"
+                        class="img-fluid juego-img">
+
+                    <br><br>
+
+                    <a href="https://ff.garena.com/"
+                        target="_blank"
+                        class="btn btn-warning">
+
+                        Jugar Free Fire
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- VISION -->
+
+            <div class="col-md-6 p-3" id="vision">
+
+                <div class="card-personal">
+
+                    <h2>Visión</h2>
+
+                    <p>
+                        Ser un gran profesional en
+                        el área de sistemas,
+                        desarrollando proyectos
+                        innovadores y creciendo
+                        profesionalmente cada día.
+                    </p>
+
+                    <h2>Misión</h2>
+
+                    <p>
+                        Terminar mi carrera con éxito,
+                        mejorar mis habilidades en
+                        programación y contribuir
+                        mediante la tecnología.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- TAREAS -->
+
+            <div class="col-md-6 p-3" id="tareas">
+
+                <div class="card-personal">
+
+                    <h2>Tareas</h2>
+
+                    <ol>
+
+                        <li>
+                            <a href="tablas.html"
+                                target="_blank">
+
+                                Tablas HTML
+
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="ajedrez.html"
+                                target="_blank">
+
+                                Tablero de Ajedrez
+
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="primos.html"
+                                target="_blank">
+
+                                Números Primos
+
+                            </a>
+                        </li>
+
+                    </ol>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- REDES -->
+
+    <footer id="redes">
+
+        <h2>Redes Sociales</h2>
+
+        <div class="redes">
+
+            <!-- FACEBOOK -->
+
+            <a href="https://www.facebook.com/share/1BUcGBUJTq/"
+                target="_blank"
+                class="icono facebook">
+
+                <i class="fab fa-facebook-f"></i>
+
+            </a>
+
+            <!-- INSTAGRAM -->
+
+            <a href="https://www.instagram.com/vidales_espinoza?igsh=MWpnbzhvZzk1amM5Ng=="
+                target="_blank"
+                class="icono instagram">
+
+                <i class="fab fa-instagram"></i>
+
+            </a>
+
+            <!-- WHATSAPP -->
+
+            <a href="https://wa.me/59164193962"
+                target="_blank"
+                class="icono whatsapp">
+
+                <i class="fab fa-whatsapp"></i>
+
+            </a>
+
+            <!-- GITHUB -->
+
+            <a href="https://github.com/"
+                target="_blank"
+                class="icono github">
+
+                <i class="fab fa-github"></i>
+
+            </a>
+
+        </div>
+
+    </footer>
+
+    <!-- BOTON SUBIR -->
+
+    <button class="btn-subir"
+        onclick="window.scrollTo({top:0,behavior:'smooth'})">
+
+        ↑
+
+    </button>
+
+    <!-- SCRIPT -->
+
+    <script>
+
+        console.log("Página cargada correctamente");
+
+    </script>
+
+    <!-- BOOTSTRAP -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
